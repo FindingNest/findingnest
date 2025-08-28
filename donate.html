@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate - FindingNest</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif;}
+      body{
+      background: url("india-1 (1).jpg") center/cover no-repeat fixed;
+      color:#333;
+      height:  2rem;
+    }
+
+    .donate-btn{background:#FFD700;color:#333;padding:10px 20px;
+      border:none;border-radius:8px;cursor:pointer;font-weight:bold;transition:0.3s;}
+    .donate-btn:hover{background:#3F4D58;}
+    
+    /* Header */
+    header{background:#0b866b;color:white;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;}
+    .logo{display:flex;align-items:center;gap:10px;}
+    .findingnestimage{height:50px;border-radius:50%;}
+    nav ul{display:flex;list-style:none;}
+    nav ul li{margin-left:20px;}
+    nav ul li a{color:white;text-decoration:none;font-weight:bold;padding:6px 12px;border-radius:8px;transition:all 0.3s;}
+    nav ul li a:hover{background:white;color:black;}
+    nav ul li a.donate-link{background:#ffd700;color:#333;}
+    nav ul li a.donate-link:hover{background:#ffb400;color:black;}
+
+    /* Donation Section */
+    .donate-section{max-width:700px;margin:3rem auto;background:#ECEEDF;padding:2rem;border-radius:15px;box-shadow:0 6px 15px rgba(0,0,0,0.1);}
+    .donate-section h2{text-align:center;color:#0b866b;font-size:2rem;margin-bottom:1rem;}
+    .donate-section p{text-align:center;margin-bottom:1.5rem;color:#555;}
+    
+    form label{display:block;margin:0.8rem 0 0.3rem;font-weight:bold;}
+    form input, form select{width:100%;padding:0.8rem;border:1px solid #ccc;border-radius:10px;font-size:1rem;}
+    
+    form button{margin-top:1.5rem;background:#28a745;color:white;border:none;padding:0.9rem;width:100%;font-size:1.1rem;font-weight:bold;border-radius:10px;cursor:pointer;transition:background 0.3s;}
+    form button:hover{background:#218838;}
+    
+    .success-message{margin-top:1rem;text-align:center;color:green;font-weight:bold;display:none;}
+
+    /* Footer */
+    footer{background:#0b866b;color:white;text-align:center;padding:1rem;margin-top:2rem;}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logofindingnest.jpg" class="findingnestimage" alt="FindingNest Logo">
+      <h1>FindingNest</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+         <li><a href="oursurvices.html">Our Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+           <li><a href="report.html">Report</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="donate.html" class="donate-link">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Donation Form -->
+  <section class="donate-section">
+    <h2>Make a Difference 💙</h2>
+    <p>Your support helps us provide shelter, food, healthcare, and education for orphan babies.</p>
+    
+    <form id="donationForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="amount">Donation Amount ($)</label>
+      <input type="number" id="amount" placeholder="Enter amount" min="1" required>
+
+      <label for="payment">Payment Method</label>
+      <select id="payment" required>
+        <option value="">-- Select Payment Method --</option>
+        <option value="credit">Credit Card</option>
+        <option value="debit">Debit Card</option>
+        <option value="upi">UPI</option>
+        <option value="paypal">PayPal</option>
+      </select>
+
+      <button type="submit">Donate Now</button>
+    </form>
+    
+    <div class="success-message" id="successMessage">
+      ✅ Thank you for your kind donation! Your support means a lot.  
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 FindingNest. All Rights Reserved.| Contact: findingnest4@gmail.com
+  </footer>
+
+  <script>
+    document.getElementById("donationForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const name=document.getElementById("name").value;
+      const email=document.getElementById("email").value;
+      const amount=document.getElementById("amount").value;
+      const payment=document.getElementById("payment").value;
+
+      if(name && email && amount && payment){
+        document.getElementById("successMessage").style.display="block";
+        this.reset();
+      } else {
+        alert("⚠️ Please fill all fields before donating.");
+      }
+    });
+  </script>
+</body>
+</html>

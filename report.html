@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Orphan Child - FindingNest</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif;}
+    body{background:#F8F5E1;color:#333;line-height:1.6;}
+
+    /* Header */
+    header{background:#0b866b;color:white;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;}
+    .logo{display:flex;align-items:center;gap:10px;}
+    .findingnestimage{height:50px;border-radius:50%;}
+    nav ul{display:flex;list-style:none;}
+    nav ul li{margin-left:20px;}
+    nav ul li a{color:white;text-decoration:none;font-weight:bold;transition:color 0.3s;}
+    nav ul li a:hover{color:#ffd700;}
+    .donate-btn{background:#FFD700;color:#333;padding:8px 16px;border-radius:8px;font-weight:bold;}
+    .donate-btn:hover{background:#333;color:#fff;}
+
+    /* Form Section */
+    .form-container {
+      max-width:650px;
+      margin:2rem auto;
+      background:white;
+      padding:2rem;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+      border-top:6px solid #0b866b;
+    }
+    .form-container h2{text-align:center;margin-bottom:1rem;color:#0b866b;}
+    .form-group{margin-bottom:1.2rem;}
+    label{display:block;font-weight:bold;margin-bottom:0.5rem;color:#0b866b;}
+    input, textarea{
+      width:100%;padding:0.8rem;border:1px solid #ccc;
+      border-radius:8px;outline:none;font-size:1rem;background:#fafafa;
+    }
+    input:focus,textarea:focus{border-color:#FFD700;box-shadow:0 0 4px #FFD700;}
+    textarea{resize:none;min-height:80px;}
+    .submit-btn{
+      background:#FFD700;color:#333;padding:0.9rem 1.5rem;border:none;border-radius:8px;
+      cursor:pointer;font-size:1.1rem;font-weight:bold;width:100%;
+      display:flex;align-items:center;justify-content:center;gap:10px;transition:0.3s;
+    }
+    .submit-btn:hover{background:#0b866b;color:white;}
+    .preview{text-align:center;margin-top:1rem;}
+    .preview img{max-width:200px;border-radius:8px;margin-top:10px;border:2px solid #0b866b;}
+
+    /* Footer */
+    footer{background:#0b866b;color:white;text-align:center;padding:1rem;margin-top:2rem;}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logofindingnest.jpg" class="findingnestimage" alt="FindingNest Logo">
+      <h1>FindingNest</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="oursurvices.html">Our Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+         <li><a href="report.html">Report</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="donate.html" class="donate-btn">Donate</a></li>
+       
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Report Form -->
+  <div class="form-container">
+    <h2>📸 Report Orphan Child</h2>
+    <form id="reportForm">
+      <div class="form-group">
+        <label for="photo">Upload Child's Photo:</label>
+        <input type="file" id="photo" accept="image/*" required>
+        <div class="preview" id="preview"></div>
+      </div>
+      <div class="form-group">
+        <label for="name">Child's Name (if known):</label>
+        <input type="text" id="name" placeholder="Enter name or 'Unknown'">
+      </div>
+      <div class="form-group">
+        <label for="age">Estimated Age:</label>
+        <input type="number" id="age" placeholder="Enter age in years">
+      </div>
+      <div class="form-group">
+        <label for="location">Location Found:</label>
+        <input type="text" id="location" placeholder="Enter exact place or address" required>
+      </div>
+      <div class="form-group">
+        <label for="details">Additional Details / Biodata:</label>
+        <textarea id="details" placeholder="Write any information you know..."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="gmail">Your Gmail:</label>
+        <input type="email" id="gmail" placeholder="Enter your Gmail address" required>
+      </div>
+      <button type="submit" class="submit-btn">📩 Submit Report</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 FindingNest. All Rights Reserved.| Contact: findingnest4@gmail.com
+  </footer>
+
+  <script>
+    // Preview uploaded photo
+    const photoInput = document.getElementById("photo");
+    const preview = document.getElementById("preview");
+    photoInput.addEventListener("change", () => {
+      const file = photoInput.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = e => {
+          preview.innerHTML = `<img src="${e.target.result}" alt="Child Photo">`;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Handle form submission
+    document.getElementById("reportForm").addEventListener("submit", function(event){
+      event.preventDefault();
+      alert("✅ Thank you! Your report has been submitted. Our team will contact you soon.");
+    });
+  </script>
+</body>
+</html>

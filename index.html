@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FindingNest - Home</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif;}
+    body{background:#f1f8e9;color:#333;line-height:1.6;}
+    header{background:#0b866b;color:white;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
+    .logo{display:flex;align-items:center;gap:10px;}
+    .findingnestimage{height:50px;border-radius:50%;}
+    nav ul{display:flex;list-style:none;}
+    nav ul li{margin-left:20px;}
+    nav ul li a{color:white;text-decoration:none;font-weight:bold;transition:color 0.3s;}
+    nav ul li a:hover{color:#FFD700;}
+    .hero{
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("India-lead-photo-1.jpg") center/cover no-repeat;
+  height: 85vh;
+ ;color:#f1f8e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding:2rem;
+}
+
+    .hero h2{font-size:2.5rem;margin-bottom:1rem;}
+    .hero p{max-width:700px;font-size:1.2rem;}
+    .welcome{padding:3rem 2rem;text-align:center;background:#F8F5E1;}
+    .welcome h3{font-size:2rem;margin-bottom:1rem;color:#127c6a;}
+    .welcome p{max-width:700px;margin:auto;font-size:1.1rem;}
+    .why{padding:3rem 2rem;text-align:center;background:#ECEEDF;}
+    .why h4{font-size:2rem;margin-bottom:1rem;color:#127c6a;}
+    .why p{max-width:700px;margin:auto;font-size:1.1rem;}
+    .details{padding:3rem 2rem;text-align:center;background: #f1f8e9;}
+    .details h3{font-size:2rem;margin-bottom:1rem;color:#0b866b;}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:2rem;}
+    .card{background:#f1f1f1;padding:1.5rem;border-radius:10px;box-shadow:0 4px 8px rgba(0,0,0,0.1);transition:transform 0.3s;}
+    .card:hover{transform:translateY(-5px);}
+    .card h4{margin-bottom:0.5rem;color:#333;}
+    footer{background:#0b866b;color:white;text-align:center;padding:1rem;margin-top:2rem;}
+    .donate-btn{background:#FFD700;color:#333;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;font-weight:bold;transition:0.3s;}
+    .donate-btn:hover{background:#3F4D58;}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="logofindingnest.jpg" class="findingnestimage" alt="FindingNest Logo">
+      <h1>FindingNest</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+         <li><a href="oursurvices.html">Our Services</a></li>
+         <li><a href="contact.html">Contact</a></li>
+          <li><a href="report.html">Report</a></li>
+         <li><a href="about.html">About</a></li>
+        <li><a href="donate.html" class="donate-btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section-->
+  <section class="hero">
+    <h2>Welcome to FindingNest</h2>
+    <p>Every child deserves love, care, and a safe home. At FindingNest, we are dedicated to improving the lives of orphan babies by providing shelter, healthcare, and education.</p>
+  </section>
+    
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <h3>Our Mission</h3>
+    <p>
+        At FindingNest, we are dedicated to supporting orphan babies and children by providing shelter, healthcare, 
+      and education. With your help, we aim to give them a brighter future filled with hope and happiness.
+    </p>
+  </section>
+
+  <!-- Why Section -->
+  <section class="why">
+    <h4>Why FindingNest?</h4>
+    <p>We believe every child deserves a family, love, and education.</p>
+       <p> Join us in making a difference in their lives.</p>
+  </section>
+
+  <!-- Services -->
+  <section class="details">
+    <h3>How You Can Help</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Sponsorship</h4>
+        <p>Help us provide education, clothing, and food for orphan babies through monthly sponsorships.</p>
+      </div>
+      <div class="card">
+        <h4>Volunteering</h4>
+        <p>Join our family of volunteers to make a direct impact in the lives of these children.</p>
+      </div>
+      <div class="card">
+        <h4>Donations</h4>
+        <p>Your financial support helps us ensure medical care and a nurturing environment for every child.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 FindingNest. All Rights Reserved.| Contact: findingnest4@gmail.com
+  </footer>
+</body>
+</html>
