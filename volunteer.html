@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Volunteer With Us - FindingNest</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif;}
+    body{background:#F8F5E1;color:#333;line-height:1.6;padding-bottom:60px;}
+
+    /* Header */
+    header{background:#0b866b;color:white;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:40;}
+    .logo{display:flex;align-items:center;gap:10px;}
+    .findingnestimage{height:50px;border-radius:50%;}
+    nav ul{display:flex;list-style:none;}
+    nav ul li{margin-left:18px;}
+    nav ul li a{color:white;text-decoration:none;font-weight:700;transition:color .25s;}
+    nav ul li a:hover{color:#ffd700;}
+    .donate-btn{background:#FFD700;color:#333;padding:8px 16px;border-radius:8px;font-weight:700;}
+    .donate-btn:hover{background:#333;color:#fff;}
+
+
+    /* Page layout */
+    .container{max-width:1100px;margin:2rem auto;padding:0 1rem;display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:start;}
+    @media (max-width:980px){ .container{grid-template-columns:1fr; padding:0 1rem;} }
+
+    /* Info card */
+    .card{background:#ECEEDF;padding:1.6rem;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08);border-top:6px solid #0b866b;}
+    .card h2{color:#0b866b;margin-bottom:.6rem;}
+    .muted{color:#666;margin-bottom:1rem;}
+
+    /* Roles list */
+    .roles{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:1rem 0 0;}
+    @media (max-width:700px){ .roles{grid-template-columns:1fr;} }
+    .role{background:#f4f9f6;padding:.9rem;border-radius:10px;border:1px solid rgba(11,134,107,0.06);}
+    .role h4{margin-bottom:.35rem;color:#0b866b;font-size:1rem;}
+
+    /* Volunteer form (right column) */
+    .form-container{position:relative;}
+    form{display:flex;flex-direction:column;gap:.9rem;}
+    label{font-weight:700;color:#0b866b;font-size:.95rem;}
+    input,select,textarea{width:100%;padding:.75rem;border:1px solid #ccc;border-radius:8px;background:#fafafa;font-size:1rem;outline:none;}
+    input:focus,textarea:focus,select:focus{border-color:#FFD700;box-shadow:0 0 4px #FFD700;}
+    textarea{min-height:100px;resize:vertical;}
+    .small{font-size:.9rem;color:#666;}
+
+    .photo-preview{display:flex;gap:10px;align-items:center;margin-top:.3rem;}
+    .photo-preview img{width:94px;height:94px;object-fit:cover;border-radius:8px;border:2px solid #0b866b;}
+
+    .submit-btn{background:#FFD700;color:#333;padding:.85rem 1rem;border:none;border-radius:10px;cursor:pointer;font-size:1rem;font-weight:800;display:flex;align-items:center;justify-content:center;gap:.6rem;}
+    .submit-btn:hover{background:#0b866b;color:#fff;}
+
+    .help-line{background:#0b866b;color:white;padding:.6rem;border-radius:8px;text-align:center;margin-top:1rem;font-weight:700;}
+    .success{background:#e6fff2;border:1px solid #aaf0cc;color:#0a6b49;padding:.8rem;border-radius:8px;margin-top:.9rem;}
+
+    /* FAQ */
+    .faq dt{font-weight:700;color:#0b866b;margin-top:1rem;}
+    .faq dd{margin-left:0.5rem;color:#555;margin-bottom:.6rem;}
+
+    /* Footer */
+    footer{
+  background:#0b866b;
+  color:white;
+  text-align:center;
+  padding:1rem;
+  margin-top:2rem;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Header (same style as report.html) -->
+  <header>
+    <div class="logo">
+      <img src="logofindingnest.jpg" class="findingnestimage" alt="FindingNest Logo">
+      <h1 style="font-size:1.25rem;">FindingNest</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="oursurvices.html">Our Services</a></li>
+        <li><a href="report.html">Report</a></li>
+        <li><a href="volunteer.html">Volunteer</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="donate.html" class="donate-btn">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- Left: Info about volunteering -->
+    <section class="card">
+      <h2>🤝 Volunteer With FindingNest</h2>
+      <p class="muted">Thanks for wanting to help! We work to locate and support vulnerable children — volunteers are our backbone. Below is everything you need to know to join.</p>
+
+      <h3 style="color:#0b866b;margin-top:10px;">What volunteers do</h3>
+      <div class="roles" aria-hidden="false">
+        <div class="role">
+          <h4>Field Reporter</h4>
+          <div class="small">Report sightings, take photos, and share location details.</div>
+        </div>
+        <div class="role">
+          <h4>Community Liaison</h4>
+          <div class="small">Coordinate with local authorities & NGOs.</div>
+        </div>
+        <div class="role">
+          <h4>Social Media Helper</h4>
+          <div class="small">Share posts, help raise awareness and campaigns.</div>
+        </div>
+        <div class="role">
+          <h4>Counselling Support</h4>
+          <div class="small">Provide basic emotional first-aid and connect families to services.</div>
+        </div>
+      </div>
+
+      <h3 style="color:#0b866b;margin-top:14px;">Time commitment</h3>
+      <p class="small">Flexible — we welcome one-off reports, weekend shifts, or weekly involvement. Typical tasks take 1–6 hours/week depending on the role.</p>
+
+      <h3 style="color:#0b866b;margin-top:12px;">Why volunteer with us?</h3>
+      <ul style="margin-left:1rem;margin-top:.6rem;color:#444;line-height:1.45;">
+        <li>Make a direct, local impact on children’s safety.</li>
+        <li>Training & support from our team.</li>
+        <li>Certificate of volunteering and references on request.</li>
+      </ul>
+
+      <h3 style="color:#0b866b;margin-top:12px;">How we keep everyone safe</h3>
+      <p class="small">We never publish identifying personal details without consent. If you encounter a child in immediate danger, call local emergency services first and then report to us.</p>
+
+      <h3 style="color:#0b866b;margin-top:12px;">Common Questions</h3>
+      <dl class="faq">
+        <dt>Do I need experience?</dt>
+        <dd>No — we train volunteers. For counselling roles, relevant experience is preferred.</dd>
+
+        <dt>Are expenses reimbursed?</dt>
+        <dd>We may reimburse pre-approved travel for official work. Discuss with our coordinator.</dd>
+
+        <dt>Who will see my volunteer info?</dt>
+        <dd>Only our volunteer coordinator and relevant project leads.</dd>
+      </dl>
+    </section>
+
+    <!-- Right: Join form -->
+    <aside class="form-container card" aria-label="Volunteer sign up form">
+      <h2 style="margin-bottom:.4rem;color:#0b866b;">✍️ Join as a Volunteer</h2>
+      <p class="small">Fill the form and we'll reach out within a few days. Fields marked * are required.</p>
+
+      <form id="volForm" novalidate>
+        <div>
+          <label for="vname">Full name *</label>
+          <input id="vname" name="vname" type="text" placeholder="Your full name" required>
+        </div>
+
+        <div>
+          <label for="vemail">Email (Gmail preferred) *</label>
+          <input id="vemail" name="vemail" type="email" placeholder="you@gmail.com" required>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;">
+          <div>
+            <label for="vphone">Phone *</label>
+            <input id="vphone" name="vphone" type="tel" placeholder="+91 98xxxxxxxx" required>
+          </div>
+          <div>
+            <label for="vrole">Preferred role *</label>
+            <select id="vrole" name="vrole" required>
+              <option value="">Choose role</option>
+              <option>Field Reporter</option>
+              <option>Community Liaison</option>
+              <option>Social Media Helper</option>
+              <option>Counselling Support</option>
+              <option>General Support</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label for="vskills">Skills / Experience</label>
+          <input id="vskills" name="vskills" type="text" placeholder="e.g. First aid, photography, social work">
+        </div>
+
+        <div>
+          <label for="vtime">Availability</label>
+          <select id="vtime" name="vtime">
+            <option>Occasional (one-off)</option>
+            <option>Weekends</option>
+            <option>Weekdays (flexible)</option>
+            <option>Weekly (2+ hours)</option>
+            <option>Full-time</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="vmessage">Short message / Why you want to join</label>
+          <textarea id="vmessage" name="vmessage" placeholder="Tell us a bit about why you'd like to help..."></textarea>
+        </div>
+
+        <div>
+          <label for="vphoto">Upload Photo (optional)</label>
+          <input id="vphoto" name="vphoto" type="file" accept="image/*">
+          <div class="photo-preview" id="vpreview" aria-hidden="true"></div>
+        </div>
+
+        <div style="display:flex;gap:.6rem;align-items:center;">
+          <input id="vagree" name="vagree" type="checkbox" required>
+          <label for="vagree" class="small" style="margin:0;">I agree to the <strong>volunteer code of conduct</strong> and consent to be contacted by FindingNest *</label>
+        </div>
+
+        <button type="submit" class="submit-btn">✅ Join Us</button>
+
+        <div id="formMsg" role="status" aria-live="polite"></div>
+      </form>
+
+      <div class="help-line" style="margin-top:12px;">
+        Emergency? Call local services first. For urgent FindingNest help email: findingnest4@gmail.com
+      </div>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 FindingNest. All Rights Reserved. | Contact: findingnest4@gmail.com
+  </footer>
+
+  <script>
+    // Photo preview
+    const vphoto = document.getElementById('vphoto');
+    const vpreview = document.getElementById('vpreview');
+    vphoto.addEventListener('change', () => {
+      vpreview.innerHTML = '';
+      const file = vphoto.files[0];
+      if (!file) return;
+      if (!file.type.startsWith('image/')) {
+        vpreview.innerHTML = '<div class="small" style="color:#b33;">Invalid file type</div>';
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = e => {
+        const img = document.createElement('img');
+        img.src = e.target.result;
+        img.alt = 'Your photo';
+        vpreview.appendChild(img);
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Simple validation and submission handling
+    const volForm = document.getElementById('volForm');
+    const formMsg = document.getElementById('formMsg');
+
+    volForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formMsg.innerHTML = '';
+
+      // Basic front-end checks
+      const name = document.getElementById('vname').value.trim();
+      const email = document.getElementById('vemail').value.trim();
+      const phone = document.getElementById('vphone').value.trim();
+      const role = document.getElementById('vrole').value;
+      const agree = document.getElementById('vagree').checked;
+
+      if (!name || !email || !phone || !role || !agree) {
+        formMsg.innerHTML = '<div class="success" style="background:#fff6e6;border:1px solid #ffd8a8;color:#7a4b00;">Please fill all required fields and accept the agreement.</div>';
+        return;
+      }
+
+      // Display a success message and reset (in production, send to server)
+      formMsg.innerHTML = '<div class="success">Thank you, ' + (name.split(' ')[0] || '') + '! 🎉 Your volunteer request has been submitted. We will contact you at ' + email + ' soon.</div>';
+      volForm.reset();
+      vpreview.innerHTML = '';
+      // Optional: Here you would send the data to your backend via fetch()/XHR
+      // Example (commented):
+      // fetch('/api/volunteers', {method:'POST', body: new FormData(volForm)}).then(...)
+    });
+  </script>
+</body>
+</html>
