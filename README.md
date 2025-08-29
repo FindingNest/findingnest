@@ -1,5 +1,5 @@
 ## 🔭 We are currently working on "FindingNest"
-##  📫 How to reach us: findingnest@gmail.com
+##  📫 How to reach us: findingnest4@gmail.com
 
 
 <!--
