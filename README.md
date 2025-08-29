@@ -1,4 +1,6 @@
-## Hi there 👋
+## 🔭 We are currently working on "FindingNest"
+##  📫 How to reach us: findingnest@gmail.com
+
 
 <!--
 **FindingNest/findingnest** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
