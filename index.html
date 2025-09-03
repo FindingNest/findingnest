@@ -18,8 +18,8 @@ h1, h2, h3 {
 /* Adjust hero for phones */
 @media (max-width: 768px) {
   .hero {
-    height: 100vh;   /* make hero full screen on mobile */
-    padding: 6rem 1rem 2rem; /* more spacing at top */
+    height: 100vh;   
+    padding: 6rem 1rem 2rem;
     text-align: center;
   }
   .hero h2 { font-size: 1.8rem; }
@@ -34,7 +34,7 @@ h1, h2, h3 {
 /* Mobile-friendly buttons */
 @media (max-width: 600px) {
   button, .donate-btn {
-    width: 100%;     /* full width buttons */
+    width: 100%;    
     font-size: 1rem;
   }
 }
@@ -42,7 +42,7 @@ h1, h2, h3 {
 @media (max-width: 900px) {
   .hero {
     height: auto;
-    padding: 7rem 1rem 3rem; /* more top padding so header doesn't overlap */
+    padding: 7rem 1rem 3rem; 
   }
   .hero h2 {
     font-size: 1.6rem;
@@ -53,6 +53,11 @@ h1, h2, h3 {
     margin-top: 0.5rem;
   }
 }
+/* Hide hamburger by default (desktop/laptop) */
+.menu-toggle {
+  display: none;
+}
+
 
 @media (max-width: 768px) {
   /* Navbar full-screen overlay */
@@ -60,7 +65,7 @@ h1, h2, h3 {
     flex-direction: column;
     position: fixed;
     top: 0;
-    right: -100%; /* hidden off screen */
+    right: -100%; 
     height: 100vh;
     width: 70%;
     background: #0b866b;
@@ -69,18 +74,19 @@ h1, h2, h3 {
     text-align: center;
   }
   nav ul.active {
-    right: 0; /* slide in */
+    right: 0; 
   }
   nav ul li {
     margin: 20px 0;
   }
   .menu-toggle {
-    display: block;
-    cursor: pointer;
-    font-size: 1.8rem;
-    color: white;
-    z-index: 1100;
-  }
+  display: block;
+  cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  z-index: 1101;
+}
+
 }
 
 @media (max-width: 600px) {
@@ -184,7 +190,7 @@ h1, h2, h3 {
     <h1 style="font-size:1.25rem;">FindingNest</h1>
   </div>
   <nav>
-    <div class="hamburger">☰</div>
+    <div class="menu-toggle">☰</div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="oursurvices.html">Our Services</a></li>
