@@ -5,6 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FindingNest - Home</title>
   <style>
+    /* Responsive Typography */
+h1, h2, h3 {
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+  p  { font-size: 1rem; padding: 0 10px; }
+}
+
+/* Adjust hero for phones */
+@media (max-width: 768px) {
+  .hero {
+    height: 100vh;   /* make hero full screen on mobile */
+    padding: 6rem 1rem 2rem; /* more spacing at top */
+    text-align: center;
+  }
+  .hero h2 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+}
+
+/* Card grid spacing */
+@media (max-width: 600px) {
+  .cards { gap: 1rem; }
+}
+
+/* Mobile-friendly buttons */
+@media (max-width: 600px) {
+  button, .donate-btn {
+    width: 100%;     /* full width buttons */
+    font-size: 1rem;
+  }
+}
+
     *{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif;}
     body{background:#f1f8e9;color:#333;line-height:1.6;}
     header{background:#0b866b;color:white;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;}
