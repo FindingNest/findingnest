@@ -44,6 +44,32 @@
     footer{background:#0b866b;color:white;text-align:center;padding:1rem;margin-top:2rem;}
     .donate-btn{background:#FFD700;color:#333;padding:10px 20px;border:none;border-radius:8px;cursor:pointer;font-weight:bold;transition:0.3s;}
     .donate-btn:hover{background:#3F4D58;}
+    /* Hamburger for mobile */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(11,134,107,0.9);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 0 12px;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+    color: white;
+  }
+}
   </style>
 </head>
 <body>
@@ -54,6 +80,7 @@
     <h1 style="font-size:1.25rem;">FindingNest</h1>
   </div>
   <nav>
+    <div class="hamburger">☰</div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="oursurvices.html">Our Services</a></li>
@@ -112,6 +139,15 @@
   <footer>
     &copy; 2025 FindingNest. All Rights Reserved.| Contact: findingnest4@gmail.com
   </footer>
+
+  <script>
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector("nav ul");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+</script>
 </body>
 </html>
 
