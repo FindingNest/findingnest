@@ -9,7 +9,10 @@
       body{
       background: url("india-1 (1).jpg") center/cover no-repeat fixed;
       color:#333;
-      height:  2rem;
+      padding-top: 100px;  
+      min-height: 100vh; 
+      display: flex;
+     flex-direction: column;
     }
 
     .donate-btn{background:#FFD700;color:#333;padding:10px 20px;
@@ -17,7 +20,8 @@
     .donate-btn:hover{background:#3F4D58;}
     
     /* Header */
-    header{background:#0b866b;color:white;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;}
+    header{background:#0b866b;color:white;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center; position: fixed;
+       top: 0; width: 100%; z-index: 1000; }
     .logo{display:flex;align-items:center;gap:10px;}
     .findingnestimage{height:50px;border-radius:50%;}
     nav ul{display:flex;list-style:none;}
@@ -28,14 +32,14 @@
     nav ul li a.donate-link:hover{background:#ffb400;color:black;}
 
     /* Donation Section */
-    .donate-section{max-width:700px;margin:3rem auto;background:#ECEEDF;padding:2rem;border-radius:15px;box-shadow:0 6px 15px rgba(0,0,0,0.1);border-top:6px solid #0b866b;}
+    .donate-section{max-width:650px;width: 90%;margin:2rem auto;background:#ECEEDF;padding:2rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.1);border-top:6px solid #0b866b;flex:1;}
     .donate-section h2{text-align:center;color:#0b866b;font-size:2rem;margin-bottom:1rem;}
     .donate-section p{text-align:center;margin-bottom:1.5rem;color:#555;}
     
     form label{display:block;margin:0.8rem 0 0.3rem;font-weight:bold;}
     form input, form select{width:100%;padding:0.8rem;border:1px solid #ccc;border-radius:10px;font-size:1rem;}
     
-    form button{margin-top:1.5rem;background:#28a745;color:white;border:none;padding:0.9rem;width:100%;font-size:1.1rem;font-weight:bold;border-radius:10px;cursor:pointer;transition:background 0.3s;}
+    form button{margin-top:1.5rem;background:#28a745;color:white;border:none;padding:0.9rem;width:100%;font-size:1.1rem;font-weight:bold;border-radius:10px;cursor:pointer;transition: background 0.3s;}
     form button:hover{background:#218838;}
     
     .success-message{margin-top:1rem;text-align:center;color:green;font-weight:bold;display:none;}
